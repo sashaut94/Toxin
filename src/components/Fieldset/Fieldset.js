@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './Fieldset.module.scss'
-import {Label} from "../Label/Label"
+import {Text} from '../Text/Text'
 
 export const Fieldset = props => {
   const cls = [classes.Fieldset]
@@ -10,9 +10,9 @@ export const Fieldset = props => {
     <fieldset className={cls.join(' ')}>
       {
         props.legend && <legend className={classes.legend}>
-          <Label>
+          <Text type='h3'>
             {props.legend}
-          </Label>
+          </Text>
         </legend>
       }
       {props.children}

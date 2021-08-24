@@ -2,9 +2,9 @@ import React from 'react'
 import classes from './RangeSlider.module.scss'
 import {connect} from "react-redux"
 import 'rc-slider/assets/index.css'
-import {Label} from "../Label/Label"
 import {Range} from 'rc-slider'
 import {onPriceAfterChange, onPriceChange} from "../../store/actions/actionCreator";
+import {Text} from '../Text/Text'
 
 const RangeSlider = props => {
   return (
@@ -12,9 +12,9 @@ const RangeSlider = props => {
       className={classes.RangeSlider}
     >
       <p className={classes.label}>
-        <Label>
+        <Text type='h3'>
           Диапазон цены
-        </Label>
+        </Text>
       </p>
 
       <p className={classes.prices}>

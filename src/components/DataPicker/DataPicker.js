@@ -3,7 +3,6 @@ import DatePicker from 'react-datepicker'
 import ru from 'date-fns/locale/ru'
 import 'react-datepicker/dist/react-datepicker.css'
 import classes from './DataPicker.module.scss'
-import {ItemTitle} from '../ItemTitle/ItemTitle'
 import {getMonth, getYear} from 'date-fns'
 import {connect} from 'react-redux'
 import {
@@ -13,6 +12,7 @@ import {
 } from '../../store/actions/actionCreator'
 import {DropdownButtons} from '../DropdownButtons/DropdownButtons'
 import {ArrowButton} from "../ArrowButton/ArrowButton";
+import {Text} from "../Text/Text";
 
 const DataPicker = props => {
   const cls = [classes.DataPicker]
@@ -56,11 +56,11 @@ const DataPicker = props => {
                 />
 
                 <p>
-                  <ItemTitle>
+                  <Text type='h2'>
                     {props.months[getMonth(date)]}
                     &nbsp;
                     {getYear(date)}
-                  </ItemTitle>
+                  </Text>
                 </p>
 
                 <ArrowButton
@@ -88,7 +88,6 @@ function mapStateToProps(state) {
   return {
     startDate: state.search.startDate,
     endDate: state.search.endDate,
-    months: state.search.months,
     dropdowns: state.search.dropdowns
   }
 }

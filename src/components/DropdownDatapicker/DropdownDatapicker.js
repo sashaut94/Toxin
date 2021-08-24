@@ -4,22 +4,35 @@ import DataPicker from '../DataPicker/DataPicker'
 import {connect} from 'react-redux'
 import {closeDataPicker} from '../../store/actions/actionCreator'
 import DropdownWrapper from '../DropdownWrapper/DropdownWrapper'
-import {Dropdown} from '../Dropdown/Dropdown'
+import {DropdownItem} from '../DropdownItem/DropdownItem'
 
 const getValue = (date) => date.getDate() + '.' + date.getMonth() + '.' + date.getFullYear()
-
+const months = [
+  "Январь",
+  "Февраль",
+  "Март",
+  "Апрель",
+  "Май",
+  "Июнь",
+  "Июль",
+  "Август",
+  "Сентябрь",
+  "Октябрь",
+  "Ноябрь",
+  "Декабрь",
+]
 const DropdownDataPicker = props => {
   let startDay, startMonth, endDay, endMonth, start, end
 
   if (props.startDate !== null) {
     startDay = props.startDate.getDate()
-    startMonth = props.months[props.startDate.getMonth()].slice(0, 3)
+    startMonth = months[props.startDate.getMonth()].slice(0, 3)
     start = `${startDay} ${startMonth} -`.toLowerCase()
   }
 
   if (props.endDate !== null) {
     endDay = props.endDate.getDate()
-    endMonth = props.months[props.endDate.getMonth()].slice(0, 3)
+    endMonth = months[props.endDate.getMonth()].slice(0, 3)
     end = ` ${endDay} ${endMonth}`.toLowerCase()
   }
 
@@ -59,12 +72,15 @@ const DropdownDataPicker = props => {
         </>
       }
 
-      <Dropdown
+      <DropdownItem
         block='dataPicker'
         isOpen={props.dropdowns.dataPicker}
       >
-        <DataPicker block={props.block}/>
-      </Dropdown>
+        <DataPicker
+          block={props.block}
+          months={months}
+        />
+      </DropdownItem>
     </DropdownWrapper>
   )
 }
@@ -73,9 +89,7 @@ function mapStateToProps(state) {
   return {
     startDate: state.search.startDate,
     endDate: state.search.endDate,
-    counters: state.search.counters,
-    dropdowns: state.search.dropdowns,
-    months: state.search.months
+    dropdowns: state.search.dropdowns
   }
 }
 

@@ -1,15 +1,15 @@
 import React from 'react'
 import classes from './RoomDescriptionList.module.scss'
-import {ItemTitle} from "../ItemTitle/ItemTitle"
 import {RoomDescriptionItem} from "./RoomDescriptionItem/RoomDescriptionItem"
+import {Text} from '../Text/Text'
 
 export const RoomDescriptionList = props => {
   return (
     <div className={classes.RoomDescriptionList}>
       <h3 className={classes.title}>
-        <ItemTitle>
+        <Text type='h2'>
           Сведения о номере
-        </ItemTitle>
+        </Text>
       </h3>
 
       <ul className={classes.list}>

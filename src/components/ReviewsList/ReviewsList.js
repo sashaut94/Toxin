@@ -1,16 +1,16 @@
 import React from 'react'
 import classes from './ReviewsList.module.scss'
-import {ItemTitle} from '../ItemTitle/ItemTitle'
 import {ReviewsItem} from './ReviewsItem/ReviewsItem'
 import {setEnding} from '../../formFramework/formFramework'
+import {Text} from '../Text/Text'
 
 export const ReviewsList = props => {
   return (
     <section className={classes.ReviewsList}>
       <h3 className={classes.title}>
-        <ItemTitle>
+        <Text type='h2'>
           Отзывы посетителей номера
-        </ItemTitle>
+        </Text>
 
         <span className={classes.amount}>
           {setEnding(props.reviews.length, ['отзыв', 'отзыва', 'отзывов'])}

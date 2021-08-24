@@ -4,7 +4,6 @@ import {FormWrapper} from '../FormWrapper/FormWrapper'
 import {RoomInfo} from '../RoomInfo/RoomInfo'
 import {Button} from '../Button/Button'
 import {Text} from '../Text/Text'
-import {ItemTitle} from '../ItemTitle/ItemTitle'
 import {connect} from 'react-redux'
 import {setEnding} from '../../formFramework/formFramework'
 import {ChooseDates} from '../ChooseDates/ChooseDates'
@@ -72,13 +71,13 @@ const Booking = props => {
           </li>
 
           <li className={classes.item}>
-            <ItemTitle>
+            <Text type='h2'>
               Итого
-            </ItemTitle>
+            </Text>
             <span className={classes.dotted}/>
-            <ItemTitle>
+            <Text type='h2'>
               {paymentForRoom + additional}₽
-            </ItemTitle>
+            </Text>
           </li>
 
         </ul>

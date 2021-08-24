@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './FormWrapper.module.scss'
-import {SubTitle} from "../SubTitle/SubTitle"
+import {Text} from '../Text/Text'
 
 export const FormWrapper = props => {
   const cls = [classes.FormWrapper]
@@ -9,9 +9,9 @@ export const FormWrapper = props => {
     <div className={cls.join(' ')}>
       {
         props.title && <h3 className={classes.title}>
-          <SubTitle>
+          <Text type='h1'>
             {props.title}
-          </SubTitle>
+          </Text>
         </h3>
       }
       {props.children}

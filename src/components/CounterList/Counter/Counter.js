@@ -1,16 +1,16 @@
 import React from 'react'
 import classes from './Counter.module.scss'
-import {Label} from '../../Label/Label'
 import {connect} from 'react-redux'
 import {changeCounter} from '../../../store/actions/actionCreator'
+import {Text} from '../../Text/Text'
 
 const Counter = props => {
   return (
     <div className={classes.Counter}>
       <p>
-        <Label>
+        <Text type='h3'>
           {props.label}
-        </Label>
+        </Text>
       </p>
 
       <div className={classes.buttons}>
@@ -26,9 +26,9 @@ const Counter = props => {
         </button>
 
         <p className={classes.count}>
-          <Label>
+          <Text type='h3'>
             {props.value}
-          </Label>
+          </Text>
         </p>
 
         <button

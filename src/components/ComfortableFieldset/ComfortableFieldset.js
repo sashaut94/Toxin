@@ -2,9 +2,9 @@ import React from 'react'
 import {setEnding} from '../../formFramework/formFramework'
 import {CounterList} from '../CounterList/CounterList'
 import {connect} from 'react-redux'
-import DropdownToggle from "../DropdownToggle/DropdownToggle";
-import DropdownWrapper from "../DropdownWrapper/DropdownWrapper";
-import {Dropdown} from "../Dropdown/Dropdown";
+import DropdownToggle from '../DropdownToggle/DropdownToggle'
+import DropdownWrapper from '../DropdownWrapper/DropdownWrapper'
+import {DropdownItem} from '../DropdownItem/DropdownItem'
 
 const ComfortableFieldset = props => {
   const comfortable = Object.values(props.filters).filter(item => item.field === 'comfortable')
@@ -28,20 +28,20 @@ const ComfortableFieldset = props => {
     <DropdownWrapper block='comfort'>
       <DropdownToggle
         label='Удобства номера'
-        withBorder={true}
+        withBorder
         placeholder={'Выберите удобства'}
         dropdownId={'comfort'}
         value={comfortValue.trim().length > 0 ? comfortValue : null}
         open={props.dropdowns['comfort']}
       />
-      <Dropdown
+      <DropdownItem
         isOpen={props.dropdowns.comfort}
         block='comfort'
       >
         <CounterList
           counters={comfortable}
         />
-      </Dropdown>
+      </DropdownItem>
     </DropdownWrapper>
   )
 }

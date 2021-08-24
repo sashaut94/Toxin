@@ -1,0 +1,20 @@
+.DropdownArrow {
+  display: block;
+  border: none;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.594.578L12 1.984l-6 6-6-6L1.406.578 6 5.172 10.594.578z' fill='%231F2041' fill-opacity='.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.navLink {
+  width: 24px;
+  height: 21px;
+}
+
+.dropdownToggle {
+  width: 44px;
+  height: 44px;
+}
+

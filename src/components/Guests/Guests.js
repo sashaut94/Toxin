@@ -6,7 +6,7 @@ import {connect} from 'react-redux'
 import {setEnding} from '../../formFramework/formFramework'
 import {closeDropdown} from '../../store/actions/actionCreator'
 import DropdownWrapper from '../DropdownWrapper/DropdownWrapper'
-import {Dropdown} from '../Dropdown/Dropdown'
+import {DropdownItem} from '../DropdownItem/DropdownItem'
 
 const Guests = props => {
   const guests = Object.values(props.filters).filter(item => item.field === 'guests')
@@ -27,7 +27,7 @@ const Guests = props => {
         dropdownId={props.dropdownId}
         open={props.dropdowns.guests}
       />
-      <Dropdown
+      <DropdownItem
         isOpen={props.dropdowns.guests}
         block='guests'
       >
@@ -43,7 +43,7 @@ const Guests = props => {
             }}
           />
         </CounterList>
-      </Dropdown>
+      </DropdownItem>
     </DropdownWrapper>
   )
 }

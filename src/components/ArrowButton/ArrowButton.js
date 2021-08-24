@@ -5,7 +5,6 @@ export const ArrowButton = props => {
   const cls = [classes.ArrowButton]
 
   if (props.block) cls.push(classes[props.block])
-  if (props.inInput) cls.push(classes.inInput)
   if (props.isLeft) cls.push(classes.left)
 
   return (

@@ -2,10 +2,15 @@
 
 .FooterLinks {
   text-align: center;
-  margin-bottom: 16px;
-  padding: 0 20px;
+  margin-bottom: 40px;
+  padding: 0 15px;
 
-  @media(min-width: 1200px) {
-    padding: 0;
+  @media(min-width: $desktop-width) {
+    text-align: left;
+    margin-bottom: 0;
   }
+}
+
+.title {
+  margin: 0 0 21px 0;
 }

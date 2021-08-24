@@ -365,18 +365,3 @@ export function fetchCurrentRoom(id) {
     }
   }
 }
-
-const changeRadio = (state, currentId) => {
-  const newRadioState = [...state]
-  newRadioState.forEach(item => {
-    item.checked = currentId === item.id;
-  })
-  return newRadioState
-}
-
-const changeTextField = (e, state, currentField, currentControlId) => {
-  const newState = {...state}
-  console.log(e.target.value)
-  newState[currentField][currentControlId].value = e.target.value
-  return newState
-}

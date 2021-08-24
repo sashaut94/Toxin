@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './Plug.module.scss'
-import {SubTitle} from '../SubTitle/SubTitle'
 import {Container} from '../Container/Container'
+import {Text} from '../Text/Text'
 
 export const Plug = props => {
   return (
@@ -9,9 +9,9 @@ export const Plug = props => {
       <Container>
         <div className={classes.inner}>
           <h1 className={classes.title}>
-            <SubTitle>
+            <Text type='h1'>
               {props.title}
-            </SubTitle>
+            </Text>
           </h1>
           <p className={classes.content}>
             Место для будущего контента

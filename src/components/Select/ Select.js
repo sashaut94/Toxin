@@ -1,15 +1,15 @@
 import React from 'react'
 import classes from './Select.module.scss'
 import {connect} from 'react-redux'
-import {Label} from '../Label/Label'
+import {Text} from '../Text/Text'
 
 const Select = props => {
   return (
     <div className={classes.Select}>
       <h4 className={classes.label}>
-        <Label>
+        <Text type='h3'>
           {props.label}
-        </Label>
+        </Text>
       </h4>
       <select
         className={classes.select}

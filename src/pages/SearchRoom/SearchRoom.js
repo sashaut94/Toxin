@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react'
 import classes from './SearchRoom.module.scss'
 import {Container} from '../../components/Container/Container'
-import {SubTitle} from '../../components/SubTitle/SubTitle'
 import RoomsList from '../../components/RoomsList/RoomsList'
 import Guests from '../../components/Guests/Guests'
 import {connect} from 'react-redux'
@@ -13,7 +12,8 @@ import AdditionalFieldset from '../../components/AdditionalFieldset/AdditionalFi
 import DropdownDataPicker from '../../components/DropdownDatapicker/DropdownDatapicker'
 import {fetchRoomsByGuests} from '../../store/actions/actionCreator'
 import SortBy from '../../components/SortBy/SortBy'
-import RoomsPerPage from "../../components/RoomsPerPage/RoomsPerPage";
+import RoomsPerPage from '../../components/RoomsPerPage/RoomsPerPage'
+import {Text} from "../../components/Text/Text";
 
 const SearchRoom = props => {
   useEffect(() => {
@@ -47,9 +47,9 @@ const SearchRoom = props => {
 
         <div className={classes.rooms}>
           <h1 className={classes.title}>
-            <SubTitle>
+            <Text type='h1'>
               Номера, которые мы для вас подобрали
-            </SubTitle>
+            </Text>
 
             <div className={classes.controls}>
               <SortBy/>

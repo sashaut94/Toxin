@@ -1,9 +1,9 @@
 import React from 'react'
 import classes from './DropdownToggle.module.scss'
-import {Label} from '../Label/Label'
 import {connect} from 'react-redux'
 import {toggleDropdown} from '../../store/actions/actionCreator'
 import {CSSTransition} from 'react-transition-group'
+import {Text} from '../Text/Text'
 
 const DropdownToggle = props => {
   const nodeRef = React.useRef(null)
@@ -37,9 +37,9 @@ const DropdownToggle = props => {
           : null
         }
       >
-        <Label>
+        <Text type='h2'>
           {props.label}
-        </Label>
+        </Text>
 
         {
           !props.withBorder && arrow

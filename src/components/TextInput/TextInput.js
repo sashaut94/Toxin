@@ -1,14 +1,13 @@
 import React from 'react'
 import classes from './TextInput.module.scss'
-import {Label} from '../Label/Label'
 import {Text} from '../Text/Text'
 import {ArrowButton} from '../ArrowButton/ArrowButton'
 import {connect} from 'react-redux'
 import {changeInput} from '../../store/actions/registrationActions'
 
 const TextInput = props => {
-
   const cls = [classes.TextInput]
+
   if (props.type) cls.push(classes[props.type])
   if (props.block) cls.push(classes[props.block])
 
@@ -16,18 +15,15 @@ const TextInput = props => {
     <div className={cls.join(' ')}>
       {
         props.label && <p className={classes.label}>
-          <Label
-            isFooter={props.isFooter}
-          >
+          <Text type='h3'>
             {props.label}
-          </Label>
+          </Text>
         </p>
       }
+
       {
         props.description && <p className={classes.text}>
-          <Text>
-            {props.description}
-          </Text>
+          {props.description}
         </p>
       }
 
@@ -41,9 +37,7 @@ const TextInput = props => {
         />
 
         {
-          props.hasButton && <ArrowButton
-            inInput={true}
-          />
+          props.type === 'withButton' && <ArrowButton block='input'/>
         }
       </p>
     </div>

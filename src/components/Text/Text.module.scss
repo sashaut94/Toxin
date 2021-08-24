@@ -1,39 +1,24 @@
 @import '../../variables';
 
 .Text {
-  font-style: normal;
-  font-weight: inherit;
-  font-size: 14px;
-  line-height: 24px;
-  color: $dark75;
   display: block;
+  font-style: normal;
+  font-weight: bold;
+  color: $dark100;
 }
 
-.booking {
-  max-width: 237px;
+.h1 {
+  font-size: 24px;
+  line-height: 29px;
 }
 
-.withClue {
-  position: relative;
-  width: 239px;
-  padding-right: 2px;
+.h2 {
+  font-size: 19px;
+  line-height: 23px;
+}
 
-  &:after {
-    content: 'i';
-    position: absolute;
-    top: 2px;
-    right: -2px;
-    width: 20px;
-    height: 20px;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 14px;
-    color: $dark25;
-    border: 1px solid $dark25;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    cursor: pointer;
-  }
+.h3 {
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
 }

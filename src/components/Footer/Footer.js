@@ -2,7 +2,6 @@ import React from 'react'
 import classes from './Footer.module.scss'
 import {Container} from '../Container/Container'
 import {Logo} from '../Logo/Logo'
-import {Text} from '../Text/Text'
 import {FooterLinks} from './FooterLinks/FooterLinks'
 import TextInput from '../TextInput/TextInput'
 import {Bottom} from './Bottom/Bottom'
@@ -88,35 +87,36 @@ export const Footer = () => (
     <Container>
       <div className={classes.inner}>
         <div className={classes.logo}>
-          <Logo isText={true}/>
+          <Logo/>
 
-          <p>
-            <Text>
-              Бронирование номеров в лучшем
-              отеле 2019 года по версии
-              ассоциации «Отельные взгляды»
-            </Text>
+          <p className={classes.text}>
+            Бронирование номеров в лучшем
+            отеле 2019 года по версии
+            ассоциации «Отельные взгляды»
           </p>
         </div>
 
         {
           blocks.map(block => <FooterLinks
-            key={block.id}
-            title={block.title}
-            links={block.links}
-          />)
+              key={block.id}
+              title={block.title}
+              links={block.links}
+            />
+          )
         }
 
-        <TextInput
-          title='Подписка'
-          block='footer'
-          hasButton={true}
-          description='Получайте специальные предложения и новости сервиса'
-          placeholder='Email'
-        />
+        <div className={classes.wrapper}>
+          <TextInput
+            label='Подписка'
+            block='footer'
+            type='withButton'
+            description='Получайте специальные предложения и новости сервиса'
+            placeholder='Email'
+          />
+        </div>
       </div>
     </Container>
 
-    <Bottom border='border'/>
+    <Bottom/>
   </footer>
 )

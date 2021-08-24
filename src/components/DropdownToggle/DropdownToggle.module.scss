@@ -1,7 +1,16 @@
 @import '../../variables';
 
 .twoFields {
-  width: 150px;
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  @media(min-width: $tablet-width) {
+    width: 150px;
+    margin-bottom: 0;
+  }
 }
 
 .label {

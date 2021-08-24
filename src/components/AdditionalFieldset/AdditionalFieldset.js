@@ -3,7 +3,7 @@ import CheckBox from '../CheckBox/CheckBox'
 import {connect} from 'react-redux'
 import DropdownToggle from '../DropdownToggle/DropdownToggle'
 import DropdownWrapper from '../DropdownWrapper/DropdownWrapper'
-import {Dropdown} from '../Dropdown/Dropdown'
+import {DropdownItem} from '../DropdownItem/DropdownItem'
 
 const AdditionalFieldset = props => {
   return (
@@ -14,7 +14,7 @@ const AdditionalFieldset = props => {
         open={props.dropdowns.additional}
       />
 
-      <Dropdown
+      <DropdownItem
         isOpen={props.dropdowns.additional}
         block='additional'
       >
@@ -29,7 +29,7 @@ const AdditionalFieldset = props => {
             />
           ))
         }
-      </Dropdown>
+      </DropdownItem>
     </DropdownWrapper>
   )
 }

@@ -10,67 +10,65 @@ const links = [
     id: 1,
     text: 'О нас',
     pathTo: '/about',
-    isNav: true
   },
   {
     id: 2,
     text: 'Услуги',
     pathTo: '/services',
     dropdown: {},
-    isNav: true
   },
   {
     id: 3,
     text: 'Вакансии',
     pathTo: '/vacancies',
-    isNav: true
   },
   {
     id: 4,
     text: 'Новости',
     pathTo: '/news',
-    isNav: true
   },
   {
     id: 5,
     text: 'Соглашения',
     pathTo: 'agreements',
     dropdown: {},
-    isNav: true
   }
 ]
 
 export const Header = () => (
-  <Container>
-    <header className={classes.Header}>
-      <Logo
-        isText={true}
-      />
+  <header>
+    <Container>
+      <div className={classes.Header}>
+        <Logo/>
 
-      <NavList
-        links={links}
-        block='header'
-      />
+        <nav className={classes.navigation}>
+          <NavList
+            links={links}
+            block='header'
+          />
+        </nav>
 
-      <div className={classes.buttons}>
-        <Button
-          type='white'
-          block='header'
-          to='/signIn'
-          isLink
-        >
-          Войти
-        </Button>
+        <div className={classes.buttons}>
+          <Button
+            type='white'
+            block='header'
+            to='/signIn'
+            isLink
+          >
+            Войти
+          </Button>
 
-        <Button
-          type='purple'
-          block='header'
-          to='/registration'
-          isLink
-        >
-          Зарегистрироваться
-        </Button>
+          <Button
+            type='purple'
+            block='header'
+            to='/registration'
+            isLink
+          >
+            Зарегистрироваться
+          </Button>
+        </div>
       </div>
-    </header>
-  </Container>
+    </Container>
+  </header>
+
 )

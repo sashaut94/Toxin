@@ -1,7 +1,6 @@
 import React from 'react'
 import classes from './Diagram.module.scss'
 import {Doughnut} from 'react-chartjs-2'
-import {ItemTitle} from "../ItemTitle/ItemTitle"
 import {Text} from "../Text/Text";
 
 export const Diagram = props => {
@@ -38,9 +37,9 @@ export const Diagram = props => {
   return (
     <div className={classes.Diagram}>
       <h3 className={classes.title}>
-        <ItemTitle>
+        <Text type='h2'>
           Впечатления от номера
-        </ItemTitle>
+        </Text>
       </h3>
 
       <div className={classes.diagram}>

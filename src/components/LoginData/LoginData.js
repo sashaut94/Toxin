@@ -1,8 +1,8 @@
 import React from 'react'
 import classes from './LoginData.module.scss'
-import {Label} from '../Label/Label'
 import TextInput from '../TextInput/TextInput'
 import {connect} from 'react-redux'
+import {Text} from '../Text/Text'
 
 const LoginData = props => {
   const loginData = Object.values(props.textInputs).filter(item => item.field === 'loginData')
@@ -11,9 +11,9 @@ const LoginData = props => {
     <fieldset className={classes.LoginData}>
       {
         props.label && <p className={classes.label}>
-          <Label>
+          <Text type='h3'>
             Данные для входа в сервис
-          </Label>
+          </Text>
         </p>
       }
 
