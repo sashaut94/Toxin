@@ -1,0 +1,25 @@
+.SearchForm {
+  display: flex;
+  padding: 30px 0 69px;
+}
+
+.filter {
+  width: 28.1%;
+  padding-right: 5.1%;
+}
+
+.rooms {
+  width: 71.9%;
+}
+
+.title {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+}

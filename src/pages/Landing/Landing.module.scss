@@ -1,0 +1,25 @@
+.Landing {
+  position: relative;
+  margin-bottom: -4px;
+}
+
+.wrapper {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.text {
+  max-width: 300px;
+  align-self: flex-end;
+  margin: 310px 0 0 0;
+}

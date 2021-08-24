@@ -1,0 +1,11 @@
+@import '../../../variables';
+
+.FooterLinks {
+  text-align: center;
+  margin-bottom: 16px;
+  padding: 0 20px;
+
+  @media(min-width: 1200px) {
+    padding: 0;
+  }
+}

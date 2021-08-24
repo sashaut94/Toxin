@@ -1,0 +1,74 @@
+@import '../../variables';
+
+.CheckBox {
+  margin-bottom: 10px;
+}
+
+.withDescription {
+  .label {
+    font-weight: bold;
+    color: $dark75;
+  }
+}
+
+.label {
+  display: flex;
+  position: relative;
+  padding: 1px 0 1px 30px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark50;
+  cursor: pointer;
+  user-select: none;
+}
+
+.input + .label:before {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  border: 1px solid $dark25;
+  border-radius: 4px;
+  transition: .3s;
+}
+
+.input:checked + .label:before {
+  border-color: $purple;
+}
+
+.input + .label:after {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.464 4.408L5.707 8.65l-1.414 1.415L.05 5.822l1.414-1.414z' fill='url(%23paint0_linear)'/%3E%3Cpath d='M8.535 2.993L9.95 4.408l-5.657 5.657L2.879 8.65l5.656-5.657z' fill='url(%23paint1_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='7.828' y1='2.286' x2='2.171' y2='7.943' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23BC9CFF'/%3E%3Cstop offset='1' stop-color='%238BA4F9'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='7.828' y1='2.286' x2='2.171' y2='7.943' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23BC9CFF'/%3E%3Cstop offset='1' stop-color='%238BA4F9'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: .3s;
+}
+
+.input:checked + .label:after {
+  opacity: 1;
+}
+
+.input:disabled + .label:before,
+.input:disabled + .label:after {
+  opacity: .25;
+}
+
+.description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: $dark50;
+  padding-left: 30px;
+  margin: 4px 0 0 0;
+}

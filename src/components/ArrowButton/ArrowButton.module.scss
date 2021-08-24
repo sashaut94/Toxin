@@ -1,0 +1,40 @@
+.ArrowButton {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  transition: .3s;
+
+  &:not(:disabled):hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+}
+
+.inInput {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  right: 0;
+}
+
+.dataPicker {
+  width: 23.93px;
+  height: 24px;
+}
+
+.inInput, .dataPicker {
+  color: #BC9CFF;
+}
+
+.image {
+  display: block;
+}
+
+.left {
+  transform: rotate(180deg);
+}

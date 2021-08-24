@@ -1,0 +1,32 @@
+@import '../../variables';
+
+.Logo {
+  display: block;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.active {
+  cursor: auto;
+}
+
+.circle, .toxin {
+  display: block;
+}
+
+.circle {
+  width: 48px;
+  height: 48px;
+  color: $dark25;
+}
+
+.logoWithText {
+  display: flex;
+  align-items: center;
+
+  & .circle {
+    margin-right: 11.5px;
+    width: 40px;
+    height: 40px;
+  }
+}

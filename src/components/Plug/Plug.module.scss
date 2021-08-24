@@ -1,0 +1,24 @@
+.Plug {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.inner {
+  text-align: center;
+  background: #FFFFFF;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  border-radius: 1px;
+}
+
+.title {
+  padding: 44px 20px 41px;
+  margin: 0;
+}
+
+.content {
+  padding: 52px 20px;
+  background-color: #f2f2f2;
+  margin: 0;
+}

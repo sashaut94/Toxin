@@ -1,0 +1,21 @@
+@import '../../../variables';
+
+.RulesItem {
+  margin-bottom: 9px;
+}
+
+.withMarker {
+  padding-left: 20.86px;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 10.43px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $dark25;
+  }
+}

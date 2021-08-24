@@ -1,0 +1,41 @@
+@import '../../../variables';
+
+.Counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 92px;
+}
+
+.button {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: $dark50;
+  border: 1px solid $dark50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:disabled {
+    color: $dark25;
+    border-color: $dark25;
+  }
+}
+
+.count {
+  margin: 0;
+  color: $dark100;
+}

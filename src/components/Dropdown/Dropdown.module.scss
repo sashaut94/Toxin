@@ -1,0 +1,46 @@
+.Dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+  backface-visibility: hidden;
+}
+
+.dataPicker {
+  top: calc(100% + 5px);
+  z-index: 4;
+}
+
+.guests {
+  z-index: 3;
+}
+
+.comfort {
+  z-index: 2;
+}
+
+.additional {
+  z-index: 1;
+}
+
+:global .enter {
+  transform: scaleY(0);
+  transform-origin: 0 0;
+}
+
+:global .enter-active {
+  transform: scaleY(1);
+  transition: 500ms;
+}
+
+:global .exit {
+  transform: scaleY(1);
+  transform-origin: 0 0;
+}
+
+:global .exit-active {
+  transform: scaleY(0);
+  transition: 500ms;
+}

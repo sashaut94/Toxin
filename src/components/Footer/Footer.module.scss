@@ -1,0 +1,41 @@
+@import '../../variables';
+
+.Footer {
+  border-top: 1px solid rgba(31, 32, 65, 0.25);
+  padding: 50px 0 0;
+
+  @media(min-width: $tablet-width) {
+    padding: 75px 0 0;
+  }
+
+  @media(min-width: $desktop-width) {
+    padding: 100px 0 0;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 50px;
+
+  @media(min-width: $tablet-width) {
+    padding-bottom: 75px;
+  }
+
+  @media(min-width: $desktop-width) {
+    padding-bottom: 100px;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+}
+
+.offers {
+  margin: 0 0 20px 0;
+}

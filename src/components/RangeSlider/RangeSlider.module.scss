@@ -1,0 +1,39 @@
+@import '../../variables';
+
+.RangeSlider {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  touch-action: none;
+}
+
+.label {
+  width: 50%;
+  margin: 0;
+}
+
+.prices {
+  width: 50%;
+  text-align: right;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $dark50;
+  margin: 0;
+}
+
+.slider {
+  margin: 20px 0 10px;
+}
+
+.description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: $dark50;
+  margin: 0;
+}

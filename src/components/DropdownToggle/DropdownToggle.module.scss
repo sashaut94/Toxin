@@ -1,0 +1,85 @@
+@import '../../variables';
+
+.twoFields {
+  width: 150px;
+}
+
+.label {
+  margin: 0 0 5.44px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+
+  .withBorder & {
+    cursor: auto;
+  }
+}
+
+.input {
+  cursor: pointer;
+  background-color: #FFFFFF;
+  border: 1px solid $dark50;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark75;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  padding: 0 0 0 15px;
+
+  .open & {
+    border-radius: 4px 4px 0 0;
+    border-bottom-color: transparent;
+  }
+
+  .dataPicker & {
+    border-radius: 4px;
+    border-bottom-color: $dark50;
+  }
+
+  .registration & {
+    padding: 12px 15px 8px;
+    background: none;
+  }
+}
+
+.arrow {
+  display: block;
+  width: 44px;
+  height: 43px;
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.33.136l1.406 1.406-6 6-6-6L2.143.136l4.593 4.593L11.33.136z' fill='%231F2041' fill-opacity='.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+:global .arrow-enter {
+  transform: rotate(0);
+}
+
+:global .arrow-enter-active {
+  transform: rotate(-180deg);
+  transition: 500ms;
+}
+
+:global .arrow-enter-done {
+  transform: rotate(-180deg);
+}
+
+:global .arrow-exit {
+  transform: rotate(-180deg);
+}
+
+:global .arrow-exit-active {
+  transform: rotate(0);
+  transition: 500ms;
+}
+
+:global .arrow-exit-done {
+  transform: rotate(0);
+}

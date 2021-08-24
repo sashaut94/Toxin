@@ -1,0 +1,27 @@
+@import '../../../../variables';
+
+.LikeButton {
+  display: block;
+  min-width: 40px;
+  height: 20px;
+  background-color: #FFFFFF;
+  border: 1px solid $dark25;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  color: $dark25;
+  cursor: pointer;
+  margin: 0 12px 0 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.04 6.734c.624-.56 1.086-.983 1.386-1.27.3-.286.625-.624.976-1.015.352-.39.593-.735.723-1.035.143-.3.215-.592.215-.879A1.37 1.37 0 007.91 1.5c-.273-.273-.618-.41-1.035-.41a1.68 1.68 0 00-.918.273 1.415 1.415 0 00-.566.703h-.782c-.104-.286-.3-.52-.586-.703a1.586 1.586 0 00-.898-.273 1.47 1.47 0 00-1.055.41c-.273.273-.41.618-.41 1.035 0 .287.065.58.195.88.144.299.391.644.743 1.034.351.39.677.73.976 1.016.3.286.762.71 1.387 1.27L5 6.772l.04-.039zM6.874.25c.651 0 1.191.221 1.621.664.443.443.664.983.664 1.621 0 .378-.071.749-.215 1.113-.143.352-.41.75-.8 1.192-.378.443-.723.814-1.036 1.113-.312.3-.813.762-1.504 1.387L5 7.887l-.605-.528A55.478 55.478 0 012.44 5.543a8.39 8.39 0 01-1.093-1.426C1.009 3.57.84 3.043.84 2.535c0-.638.215-1.178.644-1.62C1.927.47 2.474.25 3.125.25c.755 0 1.38.293 1.875.879C5.495.543 6.12.25 6.875.25z' fill='%231F2041' fill-opacity='.25'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center left 5px;
+  padding: 4px 0 3px 8px;
+}
+
+.liked {
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.902 7.887l-.605-.547a80.948 80.948 0 01-1.504-1.387c-.313-.3-.664-.67-1.055-1.113-.377-.443-.638-.84-.78-1.192a3.021 3.021 0 01-.216-1.113c0-.638.215-1.178.645-1.62.442-.444.99-.665 1.64-.665.756 0 1.38.293 1.875.879C5.397.543 6.022.25 6.777.25c.651 0 1.192.221 1.621.664.443.443.665.983.665 1.621 0 .508-.17 1.035-.508 1.582A7.84 7.84 0 017.44 5.543c-.39.404-1.035 1.01-1.933 1.816l-.606.528z' fill='url(%23paint0_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='4.902' y1='-6' x2='4.902' y2='14' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23BC9CFF'/%3E%3Cstop offset='1' stop-color='%238BA4F9'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+  color: $purple;
+  border: 1px solid $purple;
+}

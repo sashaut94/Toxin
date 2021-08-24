@@ -1,0 +1,56 @@
+@import '../../variables';
+
+.TextInput {
+  margin-bottom: 10px;
+}
+
+.wrapper {
+  position: relative;
+  margin: 0;
+}
+
+.text {
+  margin-top: 0;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  background-color: #FFF;
+  border: 1px solid $dark25;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 9px 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark25;
+  letter-spacing: 1px;
+  outline: none;
+  cursor: pointer;
+  transition: .2s;
+
+  &::placeholder {
+    line-height: 18px;
+    color: $dark25;
+  }
+
+  &:hover, &:focus {
+    color: $dark75;
+    border-color: $dark75;
+  }
+}
+
+.label {
+  margin: 0 0 5px 0;
+}
+
+.footer {
+  width: 260px;
+  margin-bottom: 20px;
+}
+
+.dateOfBirth {
+  margin-bottom: 20px;
+}

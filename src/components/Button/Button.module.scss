@@ -1,0 +1,108 @@
+@import '../../variables';
+
+.Button {
+  display: inline-block;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .3s;
+  outline: none;
+}
+
+.link, .top {
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 22px;
+  text-align: center;
+}
+
+.withoutBorder {
+  background-color: transparent;
+  color: $purple;
+  padding: 0;
+  border: none;
+
+  &:last-child {
+    margin-left: auto;
+  }
+
+  &:hover {
+    color: $dark50;
+  }
+}
+
+.white {
+  color: $purple;
+  background-color: #FFF;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    transition: .3s;
+    z-index: -1;
+  }
+
+  &:hover:before {
+    opacity: 0.5;
+  }
+}
+
+.purple {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  color: #FFF;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.withArrow {
+  @extend .purple;
+  width: 100%;
+  padding: 12px 20px 13px;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 44px;
+    height: 44px;
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 .984L17.016 9 9 17.016l-1.406-1.407 5.578-5.625H.984V8.016h12.188L7.594 2.39 9 .984z' fill='%23fff'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.header {
+  padding: 9px 12.3px 10px;
+
+  @media(min-width: $tablet-width) {
+    padding: 9px 20px 10px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.top {
+  margin-bottom: 30px;
+}
+
+.bottom {
+  padding: 12px 24.3px 13px;
+}
+
