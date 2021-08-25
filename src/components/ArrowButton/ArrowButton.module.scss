@@ -35,6 +35,16 @@
   color: #BC9CFF;
 }
 
+.button {
+  width: 44px;
+  height: 44px;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
 .image {
   display: block;
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import classes from './Landing.module.scss'
-import {Text} from '../../components/Text/Text'
 import SearchForm from '../../components/SearchForm/SearchForm'
 import {MainSlider} from '../../components/MainSlider/MainSlider'
 
@@ -12,10 +11,8 @@ export const Landing = () => (
       <SearchForm/>
 
       <p className={classes.text}>
-        <Text>
-          Лучшие номера для вашей работы,
-          отдыха и просто вдохновения
-        </Text>
+        Лучшие номера для вашей работы,
+        отдыха и просто вдохновения
       </p>
     </div>
   </section>

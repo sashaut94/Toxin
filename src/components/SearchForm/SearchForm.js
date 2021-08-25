@@ -14,7 +14,7 @@ const SearchForm = () => {
       <Button
         type='withArrow'
         to='/rooms'
-        isLink={true}
+        isLink
       >
         Подобрать номер
       </Button>

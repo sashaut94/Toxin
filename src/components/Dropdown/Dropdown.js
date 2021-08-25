@@ -1,5 +1,4 @@
 import React from 'react'
-import classes from './Dropdown.module.scss'
 import DropdownWrapper from '../DropdownWrapper/DropdownWrapper'
 import DropdownToggle from '../DropdownToggle/DropdownToggle'
 import {DropdownItem} from '../DropdownItem/DropdownItem'
@@ -19,20 +18,11 @@ export const Dropdown = props => {
       />
       <DropdownItem
         isOpen={props.dropdowns.guests}
-        block='guests'
+        block={props.block}
       >
-        <CounterList
-          counters={guests}
-        >
-          <DropdownButtons
-            remove={adultsWithChildrenAmount + babiesAmount !== 0}
-            // onClear={() => {
-            // }}
-            onApply={() => {
-              props.closeDropdown(props.dropdowns, 'guests')
-            }}
-          />
-        </CounterList>
+        {
+          props.children
+        }
       </DropdownItem>
     </DropdownWrapper>
   </div>
